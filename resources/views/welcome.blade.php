@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Controladores</title>
 
-    <!-- Fuente moderna -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
-        /* ---------- Variables y reset ---------- */
         :root{
             --primary:#6366f1;
             --primary-dark:#4f46e5;
@@ -17,7 +15,6 @@
         }
         *{margin:0;padding:0;box-sizing:border-box;}
 
-        /* ---------- Fondo animado ---------- */
         body{
             font-family:'Poppins',sans-serif;
             min-height:100vh;
@@ -34,7 +31,6 @@
             100%{background-position:0% 50%}
         }
 
-        /* ---------- Contenedor ---------- */
         .container{
             background:rgba(255,255,255,0.85);
             backdrop-filter:blur(12px);
@@ -46,7 +42,6 @@
             width:90%;
         }
 
-        /* ---------- Título con sub-rayado animado ---------- */
         h1{
             font-size:2.6rem;
             margin-bottom:2.2rem;
@@ -66,7 +61,6 @@
         }
         h1:hover::after{width:100%;left:0;}
 
-        /* ---------- Tarjetas ---------- */
         .cards{
             display:flex;
             flex-direction:column;
@@ -90,7 +84,6 @@
             transition:transform .4s cubic-bezier(.25,.46,.45,.94),box-shadow .4s;
         }
 
-        /* Iluminación suave en reposo */
         .card::before,
         .card::after{
             content:'';
@@ -118,7 +111,6 @@
         .card:hover::after{transform:translateX(120%);}
         .card:active{transform:scale(.97);}
 
-        /* ---------- Ripple ---------- */
         .ripple{
             position:absolute;
             border-radius:50%;
@@ -143,7 +135,6 @@
         </div>
     </div>
 
-    <!-- ---------- Ripple JS (≤20 líneas) ---------- -->
     <script>
         document.querySelectorAll('.card').forEach(btn=>{
             btn.addEventListener('click',e=>{
